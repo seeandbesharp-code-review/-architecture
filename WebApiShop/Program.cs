@@ -45,6 +45,7 @@ if (app.Environment.IsDevelopment())
         options.SwaggerEndpoint("/openapi/v1.json", "My API V1");
     });
 }
+app.UseExceptionHandler("/error");
 app.UseHttpsRedirection();
 app.UseErrorHandling();
 app.UseRating();

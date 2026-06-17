@@ -16,7 +16,7 @@ namespace Repositories
         }
        public async Task<IEnumerable<Category>> GetCategories()
         {
-            return await _context.Categories.ToListAsync();
+            return await _context.Categories.Take(100).ToListAsync();
         }
 
     }

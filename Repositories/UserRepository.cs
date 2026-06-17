@@ -14,7 +14,7 @@ namespace Repositories
         }
         public async Task<IEnumerable<User>> GetUsers()
         {
-            return await _context.Users.ToListAsync();
+            return await _context.Users.Take(100).ToListAsync();
         }
 
         public async Task<User?> GetUserById(int id)
